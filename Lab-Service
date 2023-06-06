@@ -1,0 +1,14 @@
+server.port=9090
+spring.datasource.url=jdbc:mysql://localhost:3306/project
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.password=root
+spring.datasource.username=root
+
+spring.jpa.hibernate.ddl-auto= update
+
+spring.application.name = lab-service
+spring.config.import=optional:configserver:
+eureka.client.serviceUrl.defaultZone  = http://localhost:8179/eureka
+eureka.instance.prefer-Ip-Address=true
+eureka.instance.hostname=localhost
+eureka.instance.instance-id=${spring.application.name}:${spring.application.instance-id:${random.value}}
